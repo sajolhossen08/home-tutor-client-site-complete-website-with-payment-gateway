@@ -1,0 +1,6 @@
+.front-tutor-img{
+    transition: all 1s;
+}
+.front-tutor-img:hover{
+    transform: scale(1.05);
+}

@@ -1,0 +1,9 @@
+.nav-link-text-style{
+    font-size: 16px !important;
+    font-family: "Poppins", sans-serif !important;
+    color: #303030 !important;
+}
+.nav-link-text-style:hover{
+    background-color: gray;
+    border-radius: 6px;
+}

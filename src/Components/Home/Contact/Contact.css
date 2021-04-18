@@ -1,0 +1,15 @@
+.contact{
+    background-image: linear-gradient(90deg,#5a5b63,#696969);
+    position: relative;
+    z-index: 1;
+}
+.contact::before{
+    position: absolute;
+    content: "";
+    top:0;
+    width: 100%;
+    height: 100%;
+    background: rgb(91, 91, 94);
+    opacity: .9;
+    z-index: -1;
+}
