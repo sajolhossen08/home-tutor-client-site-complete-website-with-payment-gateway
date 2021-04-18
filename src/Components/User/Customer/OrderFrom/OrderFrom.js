@@ -1,8 +1,10 @@
-import React, { useCallback, useState } from 'react';
+import React, {useContext, useState } from 'react';
 import { useEffect } from 'react';
-import uploadIcon from '../../../../images/upload.png'
+import { UserContext } from '../../../../App';
 
 const OrderFrom = ({handleSubmit,userServiceKey}) => {
+    const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+
     const [currentService, setCurrentService] = useState({});
     useEffect(()=>{
         userServiceKey !== "customer" && userServiceKey !== "hire_us_for_your_service" && fetch(`https://quiet-bastion-53490.herokuapp.com/services/${userServiceKey}`)
@@ -11,9 +13,13 @@ const OrderFrom = ({handleSubmit,userServiceKey}) => {
             setCurrentService(data);
         })
         .catch(err => console.log(err))
-    },[userServiceKey])
+    },[userServiceKey]);
+    
+
 
     return (
+        <div>
+        <div>
         <form onSubmit={handleSubmit} className='w-50'>
             <div className="form-group">
                 <input type="text" name='name' className='form-control' placeholder='Your name' required/>
@@ -32,6 +38,8 @@ const OrderFrom = ({handleSubmit,userServiceKey}) => {
             </div>
             <input type="submit" className='btn btn-primary px-5' value="Send"/>
         </form>
+    </div>
+    </div>
     );
 };
 
