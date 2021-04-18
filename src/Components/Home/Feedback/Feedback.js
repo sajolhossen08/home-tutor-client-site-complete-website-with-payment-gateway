@@ -6,7 +6,7 @@ import ClientFeedback from './ClientFeedback';
 const Feedback = () => {
     const [clients, setClients] = useState([]);
     useEffect(() =>{
-        fetch(`http://localhost:5050/clientComments`)
+        fetch(`https://quiet-bastion-53490.herokuapp.com/clientComments`)
         .then(res => res.json())
         .then(data => {
             // console.log(data);

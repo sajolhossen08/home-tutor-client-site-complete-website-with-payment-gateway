@@ -10,7 +10,7 @@ const AdminServiceList = () => {
     const statuses = fakeService;
     const [newStatus, setNewStatus] = useState({});
     useEffect(() =>{
-        fetch(`http://localhost:5050/clients`)
+        fetch(`https://quiet-bastion-53490.herokuapp.com/clients`)
         .then(res => res.json())
         .then(data => {
             setClientServices(data);
@@ -22,7 +22,7 @@ const AdminServiceList = () => {
         const targetAction = evt.target.value;
         const targetStyle = statuses.find(status => status.name === targetAction); 
         const id = evt.target.id;
-        fetch(`http://localhost:5050/clients/${id}`,{
+        fetch(`https://quiet-bastion-53490.herokuapp.com/clients/${id}`,{
             method: "PATCH",
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify({action: targetStyle.name,actionColor: targetStyle.style.color, actionBG: targetStyle.style.background})

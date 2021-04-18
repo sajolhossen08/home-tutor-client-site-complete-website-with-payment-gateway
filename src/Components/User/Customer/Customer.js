@@ -45,7 +45,7 @@ const Customer = ({userServiceKey}) => {
         formData.append('projectDetails', evt.target.projectDetail.value)
         formData.append('file', evt.target.file.files[0])
 
-        fetch('http://localhost:5050/addClientProject', {
+        fetch('https://quiet-bastion-53490.herokuapp.com/addClientProject', {
             method: 'POST',
             body: formData
         })

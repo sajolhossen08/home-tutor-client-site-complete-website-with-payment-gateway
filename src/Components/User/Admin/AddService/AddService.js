@@ -13,7 +13,7 @@ const AddService = () => {
         formData.append('title', evt.target.title.value)
         formData.append('description', evt.target.description.value)
         formData.append('file', evt.target.file.files[0])
-        fetch('http://localhost:5050/addServices', {
+        fetch('https://quiet-bastion-53490.herokuapp.com/addServices', {
             method: 'POST',
             body: formData
         })

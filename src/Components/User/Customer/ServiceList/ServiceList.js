@@ -7,7 +7,7 @@ import CircularProgress from '@material-ui/core/CircularProgress';
 const ServiceList = ({checkedEmail}) => {
     const [userServices, setUserServices] = useState([]);
     useEffect(() =>{
-        fetch(`http://localhost:5050/clients/email?checkedEmail=${checkedEmail}`)
+        fetch(`https://quiet-bastion-53490.herokuapp.com/clients/email?checkedEmail=${checkedEmail}`)
         .then(res => res.json())
         .then(data => {
             setUserServices(data);

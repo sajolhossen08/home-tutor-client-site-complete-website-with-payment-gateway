@@ -54,7 +54,7 @@ const LogIn = () => {
         evt.preventDefault();
         // console.log(evt.target.email.value);
         const email = evt.target.email.value;
-        fetch(`http://localhost:5050/admin?email=${email}`)
+        fetch(`https://quiet-bastion-53490.herokuapp.com/admin?email=${email}`)
         .then(res => res.json())
         .then(data => {
             // console.log(data.length > 0);

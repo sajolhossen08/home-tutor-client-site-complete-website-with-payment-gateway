@@ -14,7 +14,7 @@ const Review = () => {
             description: evt.target.description.value
         }
 
-        fetch(`http://localhost:5050/clientComments`, {
+        fetch(`https://quiet-bastion-53490.herokuapp.com/clientComments`, {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify(clientComment)
@@ -31,10 +31,10 @@ const Review = () => {
                 <input type="text" name='name' className='form-control' placeholder='Your name' required/>
             </div>
             <div className="form-group">
-                    <input type="text" name="company_designation" className='form-control' placeholder="Company's name, Designation" required/>
+                    <input type="text" name="company_designation" className='form-control' placeholder="Your jod" required/>
             </div>
             <div className="form-group">
-                <textarea name="description" cols="30" rows="6" className='form-control' placeholder='Description' required/>    
+                <textarea name="description" cols="30" rows="6" className='form-control' placeholder='Comment' required/>    
             </div>
             
             <input type="submit" className='btn btn-primary px-5' value="Submit"/>

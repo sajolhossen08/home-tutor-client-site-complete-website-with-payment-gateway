@@ -5,7 +5,7 @@ import uploadIcon from '../../../../images/upload.png'
 const OrderFrom = ({handleSubmit,userServiceKey}) => {
     const [currentService, setCurrentService] = useState({});
     useEffect(()=>{
-        userServiceKey !== "customer" && userServiceKey !== "hire_us_for_your_service" && fetch(`http://localhost:5050/services/${userServiceKey}`)
+        userServiceKey !== "customer" && userServiceKey !== "hire_us_for_your_service" && fetch(`https://quiet-bastion-53490.herokuapp.com/services/${userServiceKey}`)
         .then(res => res.json())
         .then(data => {
             setCurrentService(data);
